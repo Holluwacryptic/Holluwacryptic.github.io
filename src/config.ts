@@ -1,22 +1,22 @@
 export const siteConfig = {
-  name: "Ryan Fitzgerald",
-  title: "Senior Software Engineer",
-  description: "Portfolio website of Ryan Fitzgerald",
+  name: "Toluwalope Dada",
+  title: "Robotics Engineer",
+  description: "Portfolio website of Toluwalope Dada",
   accentColor: "#1d4ed8",
   social: {
-    email: "your-email@example.com",
-    linkedin: "https://linkedin.com/in/yourprofile",
-    twitter: "https://x.com/rfitzio",
-    github: "https://github.com/RyanFitzgerald",
+    email: "Toluwalopedada1@gmail.com",
+    linkedin: "https://linkedin.com/in/tdad",
+    twitter: "https://x.com/tdad1992",
+    github: "https://github.com/Holluwacryptic",
   },
   aboutMe:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quos asperiores nihil consequatur tempore cupiditate architecto natus commodi corrupti quas quasi facere est, dignissimos odit nam veniam sapiente ut, vitae eligendi ipsum dolor, nostrum ullam impedit! Corrupti ratione mollitia temporibus necessitatibus, consectetur reiciendis recusandae id, dolorum quaerat, vero pariatur. Ratione!",
-  skills: ["Javascript", "React", "Node.js", "Python", "AWS", "Docker"],
+    "Learning robotics and building projects on fixe-wing VTOL Unmanned Aerial Vehicles. Graduate mechanical engineer with profesional experience in automobile repair, maintenance and fleet management.",
+  skills: ["C", "C++", "Linux", "Python", "ROS2", "Docker", "Gazebo", ""],
   projects: [
     {
-      name: "AI Dev Roundup Newsletter",
+      name: "Simulation of multi-agent UAVs in uncertain environment",
       description:
-        "One concise email. Five minutes. Every Tuesday. Essential AI news & trends, production-ready libraries, powerful AI tools, and real-world code examples",
+        "Using Linux, ROS2, Gazebo, Docker, ",
       link: "https://aidevroundup.com/?ref=devportfolio",
       skills: ["React", "Node.js", "AWS"],
     },
@@ -70,12 +70,12 @@ export const siteConfig = {
   education: [
     {
       school: "University Name",
-      degree: "Bachelor of Science in Computer Science",
-      dateRange: "2014 - 2018",
+      degree: "Bachelor of Science in Mechanical Engineering",
+      dateRange: "2014 - 2019",
       achievements: [
-        "Graduated Magna Cum Laude with 3.8 GPA",
-        "Dean's List all semesters",
-        "President of Computer Science Club",
+        "Departmental Soccer Coach",
+        "Engineering faculty stakeholder",
+        "Course Representative",
       ],
     },
     {
