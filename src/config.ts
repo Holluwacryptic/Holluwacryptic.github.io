@@ -69,7 +69,7 @@ export const siteConfig = {
   ],
   education: [
     {
-      school: "University Name",
+      school: "Federal University of Technology Akure",
       degree: "Bachelor of Science in Mechanical Engineering",
       dateRange: "2014 - 2019",
       achievements: [
