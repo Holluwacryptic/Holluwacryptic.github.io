@@ -10,8 +10,10 @@ export const siteConfig = {
     github: "https://github.com/Holluwacryptic",
   },
   aboutMe:
-    "Learning robotics and building projects on fixe-wing VTOL Unmanned Aerial Vehicles. Graduate mechanical engineer with profesional experience in automobile repair, maintenance and fleet management.",
-  skills: ["C", "C++", "Linux", "Python", "ROS2", "Docker", "Gazebo", ""],
+    "Learning robotics and building projects on Unmanned Aerial Vehicles. A professional graduate mechanical engineer (Masters of Science) with profesional experience in automobile repair, maintenance operations, supply chain and fleet management.",
+  programming: ["C", "C++", "Python"],
+  robotics : ["Gazebo", "Docker", "Onshape", "Machine Learning", ""],
+  tools: ["Linux", "ROS2", "Gazebo", "Docker", "Onshape", "Machine Learning"]
   projects: [
     {
       name: "Simulation of multi-agent UAVs in uncertain environment",
