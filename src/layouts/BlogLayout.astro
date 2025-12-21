@@ -1,6 +1,8 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { siteConfig } from '../config';
+import '../styles/global.css';
 
 interface Props {
   frontmatter: {
@@ -19,26 +21,35 @@ const { frontmatter } = Astro.props;
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{frontmatter.title} | Your Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="generator" content={Astro.generator} />
+  <title>{frontmatter.title} | {siteConfig.name}</title>
   <meta name="description" content={frontmatter.description}>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet"
+  />
 </head>
 <body class="bg-gray-50 dark:bg-gray-900">
   <Header />
   
-  <article class="max-w-4xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-    <header class="mb-12">
+  <article class="max-w-4xl mx-auto px-4 py-32 sm:px-6 lg:px-8">
+    <header class="mb-12 animate-fade-in">
       <a 
         href="/blog" 
-        class="inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline mb-8"
+        class="inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline mb-8 transition-colors group"
       >
-        ← Back to Blog
+        <span class="group-hover:-translate-x-1 transition-transform inline-block">←</span>
+        <span class="ml-2">Back to Blog</span>
       </a>
       
-      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight leading-tight">
         {frontmatter.title}
       </h1>
       
-      <div class="flex items-center text-gray-600 dark:text-gray-400">
+      <div class="flex items-center text-gray-600 dark:text-gray-400 font-mono text-sm">
         <time datetime={frontmatter.date}>
           {new Date(frontmatter.date).toLocaleDateString('en-US', { 
             year: 'numeric', 
@@ -55,13 +66,16 @@ const { frontmatter } = Astro.props;
       </div>
     </header>
 
-    <div class="prose prose-lg dark:prose-invert max-w-none
-                prose-headings:text-gray-900 dark:prose-headings:text-white
-                prose-p:text-gray-700 dark:prose-p:text-gray-300
-                prose-a:text-blue-600 dark:prose-a:text-blue-400
-                prose-strong:text-gray-900 dark:prose-strong:text-white
-                prose-code:text-gray-900 dark:prose-code:text-white
-                prose-pre:bg-gray-800 dark:prose-pre:bg-gray-950">
+    <div class="prose prose-lg dark:prose-invert max-w-none animate-slide-up
+                prose-headings:text-gray-900 dark:prose-headings:text-white prose-headings:font-bold prose-headings:tracking-tight
+                prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed
+                prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-a:no-underline hover:prose-a:underline
+                prose-strong:text-gray-900 dark:prose-strong:text-white prose-strong:font-semibold
+                prose-code:text-blue-600 dark:prose-code:text-blue-400 prose-code:font-mono prose-code:bg-gray-100 dark:prose-code:bg-gray-800 prose-code:px-1 prose-code:py-0.5 prose-code:rounded
+                prose-pre:bg-gray-900 dark:prose-pre:bg-gray-950 prose-pre:border prose-pre:border-gray-800
+                prose-ul:list-disc prose-ol:list-decimal
+                prose-li:text-gray-700 dark:prose-li:text-gray-300
+                prose-blockquote:border-l-4 prose-blockquote:border-blue-600 prose-blockquote:pl-4 prose-blockquote:italic">
       <slot />
     </div>
   </article>
@@ -69,3 +83,36 @@ const { frontmatter } = Astro.props;
   <Footer />
 </body>
 </html>
+
+<style>
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+</style>
