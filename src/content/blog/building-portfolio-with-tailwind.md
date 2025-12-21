@@ -1,10 +1,10 @@
 ---
-layout: ../../layouts/BlogLayout.astro
-title: "Building a Modern Portfolio with Tailwind CSS"
-date: "2024-12-10"
-description: "Discover how to create a beautiful, responsive portfolio website using Tailwind CSS and modern design principles."
+title: " "
+date: "2024-12-15"
+description: "..."
 author: "Your Name"
 ---
+
 
 # Building a Modern Portfolio with Tailwind CSS
 
