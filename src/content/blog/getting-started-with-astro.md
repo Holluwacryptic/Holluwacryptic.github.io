@@ -1,8 +1,7 @@
 ---
-layout: ../../layouts/BlogLayout.astro
 title: "Getting Started with Astro and TypeScript"
 date: "2024-12-15"
-description: "Learn how to build fast, modern websites with Astro and TypeScript. This guide covers the basics of setting up your first Astro project."
+description: "..."
 author: "Your Name"
 ---
 
