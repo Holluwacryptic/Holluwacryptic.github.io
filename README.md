@@ -1,187 +1,395 @@
-<img width="1943" height="1093" alt="image" src="https://github.com/user-attachments/assets/cc2ff955-17c2-48c7-81c8-479a0f061850" />
+# Toluwalope Dada - Portfolio Website
 
-# DevPortfolio Template
+[![Deploy Status](https://github.com/Holluwacryptic/Holluwacryptic.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/Holluwacryptic/Holluwacryptic.github.io/actions/workflows/deploy.yml)
 
-A modern, minimalist portfolio template built with Astro and Tailwind CSS. Perfect for developers looking to showcase their skills, experience, and projects in a clean, professional way.
+Personal portfolio website showcasing my work in robotics engineering, autonomous systems, and UAV development. Built with Astro and deployed on GitHub Pages.
 
-This was completely rebuilt from the ground up from V1. This template was built to be entirely ready to go with a quick config edit (see below) but also provides the ability to easily extend in whatever way you want.
+**🌐 Live Site**: [https://holluwacryptic.github.io](https://holluwacryptic.github.io)
 
-This template also comes with `CLAUDE.md` and `.cursor/rules` files for easy integration with your existing AI workflows.
+---
 
-> **📬 Connect & Share!**  
-> For questions and updates, feel free to reach out on [**X (Twitter)**](https://x.com/rfitzio).  
-> If you've built and published your personal site with this template, I'd love to see it! Send me a DM 🚀
+## 📋 Table of Contents
 
-## Preview
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Content Management](#content-management)
+- [Project Structure](#project-structure)
+- [Deployment](#deployment)
+- [Customization](#customization)
+- [Troubleshooting](#troubleshooting)
+- [License](#license)
 
-To view a live preview of the site, [click here](https://ryanfitzgerald.github.io/devportfolio/).
+---
 
-## Built With
+## ✨ Features
 
-- **[Astro](https://astro.build/)** - Static site generator for modern web apps
-- **[Tailwind CSS v4](https://tailwindcss.com/)** - Utility-first CSS framework
-- **[Tabler Icons](https://tabler.io/icons)** - Free and open source icons
-- **TypeScript** - For type-safe configuration
+- **🏠 Home Page** - Hero section with introduction, about me, skills showcase
+- **🚀 Projects** - Standalone projects page with detailed project cards
+- **💼 Experience** - Professional work history and achievements
+- **🎓 Education** - Academic background and certifications
+- **📝 Blog** - Technical writing and project documentation
+- **📄 Resume** - Downloadable/printable resume page
+- **📱 Responsive Design** - Works seamlessly on all devices
+- **🎨 Modern UI** - Clean, professional design with IBM Plex Mono font
+- **⚡ Fast Performance** - Static site generation for optimal speed
+- **🔍 SEO Optimized** - Proper meta tags and structured data
 
-## Updating the Template
+---
 
-### Configuration
+## 🛠️ Tech Stack
 
-The template is designed to be easily customizable through the `src/config.ts` file. This single file controls:
+- **Framework**: [Astro 5.x](https://astro.build)
+- **Styling**: [Tailwind CSS 4.x](https://tailwindcss.com) via Vite plugin
+- **Language**: TypeScript
+- **Deployment**: GitHub Pages via GitHub Actions
+- **Font**: IBM Plex Mono (Google Fonts)
 
-- **Personal Information**: Name, title, description
-- **Accent Color**: Primary color theme (changing this will change the accent color site wide)
-- **Social Links**: Email, LinkedIn, Twitter, GitHub (all optional)
-- **About Section**: Personal bio/description
-- **Skills**: List of technical skills
-- **Projects**: Project showcase with descriptions and links
-- **Experience**: Work history with bullet points
-- **Education**: Educational background and achievements
+---
 
-If skills, projects, experience, or education are removed from the config, those sections will be hidden entirely.
+## 🚀 Getting Started
 
-### Example structures
+### Prerequisites
 
-Here's what the config data structure looks like for each section:
+- Node.js 18+ and npm
+- Git
 
-#### Basic Information
-```typescript
-name: "Your Name",
-title: "Your Job Title",
-description: "Brief site description",
-accentColor: "#1d4ed8", // Hex color for theme
+### Local Development
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Holluwacryptic/Holluwacryptic.github.io.git
+   cd Holluwacryptic.github.io
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open in browser**
+   ```
+   http://localhost:4321
+   ```
+
+### Build for Production
+
+```bash
+npm run build
 ```
 
-#### Social Links (all optional)
-```typescript
-social: {
-  email: "your-email@example.com",
-  linkedin: "https://linkedin.com/in/yourprofile",
-  twitter: "https://twitter.com/yourprofile", 
-  github: "https://github.com/yourusername",
-}
+Built files will be in the `dist/` directory.
+
+### Preview Production Build
+
+```bash
+npm run preview
 ```
 
-#### About Section
-```typescript
-aboutMe: "A paragraph describing yourself, your background, interests, and what you're passionate about. This appears in the About section of your portfolio."
-```
+---
 
-#### Skills
-```typescript
-skills: ["JavaScript", "React", "Node.js", "Python", "AWS", "Docker"]
-```
+## 📝 Content Management
 
-#### Projects
+All content is centrally managed for easy updates. No need to edit multiple files!
+
+### Main Configuration: `src/config.ts`
+
+This is your **content hub**. Edit this file to update:
+
+- ✏️ Personal information (name, title, bio)
+- 🔗 Social links (email, LinkedIn, GitHub, Twitter)
+- 💡 Skills list
+- 🚀 Projects portfolio
+- 💼 Work experience
+- 🎓 Education history
+
+**Example: Adding a New Project**
+
 ```typescript
+// In src/config.ts
 projects: [
   {
-    name: "Project Name",
-    description: "Brief description of what the project does and its impact",
+    name: "Your Project Name",
+    description: "Brief description of what your project does",
     link: "https://github.com/yourusername/project",
-    skills: ["React", "Node.js", "AWS"], // Technologies used
-  }
-]
+    skills: ["Python", "ROS2", "Docker"],
+  },
+  // ... other projects
+],
 ```
 
-#### Experience
-```typescript
-experience: [
-  {
-    company: "Company Name",
-    title: "Your Job Title",
-    dateRange: "Jan 2022 - Present",
-    bullets: [
-      "Led development of microservices architecture serving 1M+ users",
-      "Reduced API response times by 40% through optimization",
-      "Mentored team of 5 junior developers",
-    ],
-  }
-]
+### Blog Posts: `src/content/blog/`
+
+Create markdown files for blog posts:
+
+**File structure:**
+```
+src/content/blog/
+├── my-first-post.md
+├── uav-development.md
+└── robotics-tutorial.md
 ```
 
-#### Education
-```typescript
-education: [
-  {
-    school: "University Name",
-    degree: "Bachelor of Science in Computer Science",
-    dateRange: "2014 - 2018",
-    achievements: [
-      "Graduated Magna Cum Laude with 3.8 GPA",
-      "Dean's List all semesters",
-      "President of Computer Science Club"
-    ]
-  }
-]
+**Blog post template:**
+
+```markdown
+---
+title: "Your Blog Post Title"
+date: "2025-12-21"
+description: "A brief description for the blog listing"
+author: "Your Name"
+---
+
+# Your Blog Post Title
+
+Your content here using Markdown...
+
+## Subheading
+
+- Bullet points
+- More content
+
+```code blocks```
 ```
 
-### Icons
+**✨ New blog posts automatically appear on your blog page!**
 
-The template uses [Tabler Icons](https://tabler.io/icons) for all icons. If you wish to add more icons and have it look consistent with what's already there, you can browse through their extensive icon library.
+### Quick Content Updates
 
-## Project Structure
+| What to Update | File Location | Notes |
+|---------------|---------------|-------|
+| About me, skills, projects | `src/config.ts` | Single source of truth |
+| Blog posts | `src/content/blog/*.md` | Each post is a separate file |
+| Site metadata | `src/config.ts` | Description, title |
+| Navigation | `src/components/Header.astro` | Rarely needs changes |
+
+---
+
+## 📁 Project Structure
 
 ```
-devportfolio/
+Holluwacryptic.github.io/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml          # GitHub Actions deployment
 ├── public/
-│   └── favicon.svg          # Site favicon
+│   └── favicon.svg             # Site favicon
 ├── src/
-│   ├── components/          # Astro components
-│   │   ├── About.astro      # About section
-│   │   ├── Education.astro  # Education section
-│   │   ├── Experience.astro # Work experience section
-│   │   ├── Footer.astro     # Site footer
-│   │   ├── Header.astro     # Navigation header
-│   │   ├── Hero.astro       # Hero/intro section
-│   │   └── Projects.astro   # Projects showcase
+│   ├── components/             # Reusable UI components
+│   │   ├── About.astro
+│   │   ├── BlogCard.astro
+│   │   ├── Education.astro
+│   │   ├── Experience.astro
+│   │   ├── Footer.astro
+│   │   ├── Header.astro
+│   │   ├── Hero.astro
+│   │   └── Projects.astro
+│   ├── content/
+│   │   └── blog/               # Blog posts (Markdown)
+│   │       ├── post-1.md
+│   │       └── post-2.md
+│   ├── layouts/
+│   │   └── BlogLayout.astro    # Blog post template
 │   ├── pages/
-│   │   └── index.astro      # Main page layout
+│   │   ├── blog/
+│   │   │   ├── [...slug].astro # Dynamic blog post pages
+│   │   │   └── index.astro     # Blog listing page
+│   │   ├── index.astro         # Homepage
+│   │   ├── projects.astro      # Projects page
+│   │   └── resume.astro        # Resume page
 │   ├── styles/
-│   │   └── global.css       # Global styles
-│   └── config.ts            # Site configuration
-├── astro.config.mjs         # Astro configuration
-├── package.json             # Project dependencies
-├── tailwind.config.js       # Tailwind configuration
-└── tsconfig.json            # TypeScript configuration
+│   │   └── global.css          # Global styles
+│   └── config.ts               # ⭐ Main content configuration
+├── astro.config.mjs            # Astro configuration
+├── package.json                # Dependencies
+├── tailwind.config.js          # Tailwind CSS config (if exists)
+├── tsconfig.json               # TypeScript config
+└── README.md                   # This file
 ```
 
-## Local Development
+---
 
-If you'd like to run it locally:
+## 🚀 Deployment
 
+The site automatically deploys to GitHub Pages when you push to the `main` branch.
+
+### Deployment Process
+
+1. **Edit content** (locally or via vscode.dev)
+2. **Commit changes**
+   ```bash
+   git add .
+   git commit -m "Update content"
+   ```
+3. **Push to GitHub**
+   ```bash
+   git push origin main
+   ```
+4. **Automatic deployment** - GitHub Actions builds and deploys
+5. **Live in ~2 minutes** at https://holluwacryptic.github.io
+
+### Monitoring Deployment
+
+- Check deployment status: [Actions tab](https://github.com/Holluwacryptic/Holluwacryptic.github.io/actions)
+- Green checkmark ✅ = successful deployment
+- Red X ❌ = build failed (check logs for errors)
+
+### GitHub Pages Settings
+
+**Settings → Pages:**
+- Source: **GitHub Actions**
+- Branch: Not used (Actions handles deployment)
+
+---
+
+## 🎨 Customization
+
+### Changing Colors
+
+The site uses a blue accent color (`#1d4ed8`). To change:
+
+1. Update `accentColor` in `src/config.ts`
+2. Search and replace `#1d4ed8` in page files with your color
+3. Update Tailwind classes: `blue-600` → `purple-600` (etc.)
+
+### Adding New Pages
+
+1. Create new file in `src/pages/`, e.g., `src/pages/contact.astro`
+2. Add navigation link in `src/components/Header.astro`
+3. Commit and push
+
+### Modifying Design
+
+All pages use inline styles and minimal Tailwind (compatible with v4). To modify:
+
+1. Open the relevant page file in `src/pages/`
+2. Edit inline styles: `style="..."`
+3. Modify CSS in `<style>` tags at bottom of file
+
+---
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+#### Build Fails After Editing
+
+**Check:**
+- Missing commas in `config.ts` arrays
+- Unclosed brackets/braces: `{ }` `[ ]`
+- Mismatched quotes: use `"` consistently
+- Review error in GitHub Actions logs
+
+#### Changes Not Visible on Live Site
+
+**Solutions:**
+1. Wait for GitHub Actions to complete (~2 minutes)
+2. Hard refresh browser: `Ctrl + Shift + R` (Windows) or `Cmd + Shift + R` (Mac)
+3. Clear browser cache
+4. Try incognito/private mode
+
+#### Blog Post Not Appearing
+
+**Check:**
+- File is in `src/content/blog/` folder
+- File extension is `.md`
+- Frontmatter has all required fields:
+  ```yaml
+  ---
+  title: "..."
+  date: "YYYY-MM-DD"
+  description: "..."
+  ---
+  ```
+- No layout field in frontmatter (not supported in Astro 5)
+
+#### CSS Not Loading on Blog/Resume
+
+**Solution:**
+- Ensure you're using the "simple" versions of pages (inline styles)
+- Check `src/styles/global.css` uses: `@import "tailwindcss";`
+
+### Getting Help
+
+1. Check [GitHub Issues](https://github.com/Holluwacryptic/Holluwacryptic.github.io/issues)
+2. Review [Astro Documentation](https://docs.astro.build)
+3. Check deployment logs in Actions tab
+
+---
+
+## 📦 Dependencies
+
+Main dependencies (see `package.json` for versions):
+
+- `astro` - Static site framework
+- `tailwindcss` - CSS framework
+- `@tailwindcss/vite` - Tailwind v4 Vite plugin
+
+---
+
+## 🔄 Updating Dependencies
+
+```bash
+# Check for updates
+npm outdated
+
+# Update all dependencies
+npm update
+
+# Update specific package
+npm update astro
 ```
-git clone https://github.com/RyanFitzgerald/devportfolio.git
-cd devportfolio
-npm install
-```
 
-After that, start up the Astro dev server with:
+---
 
-```
-npm run dev
-```
+## 📄 License
 
-## Deployment
+This project is open source and available under the [MIT License](LICENSE.md).
 
-The template can be deployed to any static hosting service easily (and in most cases, completely free). Here are some options:
+Feel free to fork and customize for your own portfolio!
 
-- To deploy with Netlify, [click here](https://docs.astro.build/en/guides/deploy/netlify/).
-- To deploy with Vercel, [click here](https://docs.astro.build/en/guides/deploy/vercel/).
-- To deploy with GitHub Pages, [click here](https://docs.astro.build/en/guides/deploy/github/).
-- To deploy with Cloudflare Pages, [click here](https://docs.astro.build/en/guides/deploy/cloudflare/).
-- To deploy with Render, [click here](https://docs.astro.build/en/guides/deploy/render/).
+---
 
-Want to deploy somewhere else? Find more guides [here](https://docs.astro.build/en/guides/deploy/).
+## 🤝 Contributing
 
-## Changelog
+This is a personal portfolio, but suggestions and bug reports are welcome!
 
-To view the changelog, see CHANGELOG.md.
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/improvement`
+3. Commit changes: `git commit -m "Add improvement"`
+4. Push to branch: `git push origin feature/improvement`
+5. Open a Pull Request
 
-## License
+---
 
-This project is fully and completely MIT. See LICENSE.md.
+## 📧 Contact
 
-## Questions?
+**Toluwalope Dada**
+- Email: [Toluwalopedada1@gmail.com](mailto:Toluwalopedada1@gmail.com)
+- LinkedIn: [linkedin.com/in/tdad](https://linkedin.com/in/tdad)
+- GitHub: [@Holluwacryptic](https://github.com/Holluwacryptic)
+- Twitter: [@tdad1992](https://x.com/tdad1992)
 
-Feel free to reach out on [X (Twitter)](https://x.com/rfitzio) if you have any questions or need help.
+---
+
+## ⭐ Acknowledgments
+
+- Built with [Astro](https://astro.build)
+- Styled with [Tailwind CSS](https://tailwindcss.com)
+- Font: [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono)
+- Deployed on [GitHub Pages](https://pages.github.com)
+
+---
+
+**Last Updated**: December 2025
+
+**Portfolio Live**: https://holluwacryptic.github.io
+
+---
+
+Made with ❤️ and ☕ by Toluwalope Dada
