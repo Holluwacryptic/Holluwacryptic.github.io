@@ -1,7 +1,8 @@
 ---
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import BlogCard from '../../components/BlogCard.astro';
+import { siteConfig } from '../../config';
+import '../../styles/global.css';
 
 // Get all blog posts
 const allPosts = await Astro.glob('../../content/blog/*.md');
@@ -14,48 +15,79 @@ const sortedPosts = allPosts.sort((a, b) =>
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog | Your Portfolio</title>
-  <meta name="description" content="Read my latest thoughts on web development, design, and technology.">
-</head>
-<body class="bg-gray-50 dark:bg-gray-900">
-  <Header />
-  
-  <main class="max-w-6xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-    <div class="mb-12">
-      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-        Blog
-      </h1>
-      <p class="text-xl text-gray-600 dark:text-gray-400">
-        Thoughts on web development, design, and technology
-      </p>
-    </div>
-
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-      {sortedPosts.map((post) => {
-        const slug = post.file.split('/').pop()?.replace('.md', '') || '';
-        return (
-          <BlogCard
-            title={post.frontmatter.title}
-            date={post.frontmatter.date}
-            description={post.frontmatter.description}
-            slug={slug}
-          />
-        );
-      })}
-    </div>
-
-    {sortedPosts.length === 0 && (
-      <div class="text-center py-12">
-        <p class="text-gray-600 dark:text-gray-400 text-lg">
-          No blog posts yet. Check back soon!
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Blog posts about robotics and engineering" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Blog | {siteConfig.name}</title>
+  </head>
+  <body>
+    <Header />
+    
+    <section style="max-width: 1200px; margin: 0 auto; padding: 8rem 2rem 4rem;">
+      <div style="margin-bottom: 4rem;">
+        <h1 style="font-size: 3rem; font-weight: bold; margin-bottom: 1rem;">Blog</h1>
+        <p style="font-size: 1.25rem; color: #666; max-width: 42rem;">
+          Thoughts on robotics, engineering, and technology
         </p>
       </div>
-    )}
-  </main>
 
-  <Footer />
-</body>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem;">
+        {sortedPosts.map((post) => {
+          const slug = post.file.split('/').pop()?.replace('.md', '') || '';
+          return (
+            <article style="border: 1px solid #e5e5e5; border-radius: 8px; padding: 1.5rem; transition: all 0.3s;">
+              <a href={`/blog/${slug}`} style="text-decoration: none; color: inherit;">
+                <h2 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem; color: #1d4ed8;">
+                  {post.frontmatter.title}
+                </h2>
+                <time style="font-size: 0.875rem; color: #666; display: block; margin-bottom: 1rem;">
+                  {new Date(post.frontmatter.date).toLocaleDateString('en-US', { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric' 
+                  })}
+                </time>
+                <p style="color: #333; line-height: 1.6;">
+                  {post.frontmatter.description}
+                </p>
+                <span style="display: inline-block; margin-top: 1rem; color: #1d4ed8; font-weight: 600;">
+                  Read more →
+                </span>
+              </a>
+            </article>
+          );
+        })}
+      </div>
+
+      {sortedPosts.length === 0 && (
+        <div style="text-align: center; padding: 6rem 0;">
+          <p style="font-size: 1.125rem; color: #666;">
+            No blog posts yet. Check back soon!
+          </p>
+        </div>
+      )}
+    </section>
+
+    <Footer />
+  </body>
 </html>
+
+<style>
+  article:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+  }
+  
+  a:hover h2 {
+    text-decoration: underline;
+  }
+</style>
