@@ -32,7 +32,7 @@ export const siteConfig = {
       description:
         "Modeled complete hybrid VTOL platform in Onshape and SolidWorks (1.5m span, 4kg MTOW) with quad-tiltrotor architecture optimized for reconnaissance, cargo delivery, aerial mapping, and emergency response applications",
       link: "https://github.com/Holluwacryptic/blog",
-      skills: ["Onshape, Solidworks],
+      skills: ["Onshape, Solidworks"],
     },
   ],
   experience: [
