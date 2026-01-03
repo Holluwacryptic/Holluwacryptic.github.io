@@ -38,12 +38,12 @@ const projects = siteConfig.projects || [];
         Featured Projects
       </h1>
       <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 max-w-3xl leading-relaxed">
-        Exploring robotics, autonomous systems, and cutting-edge engineering solutions
+        Exploring robotics, UAV development, autonomous systems, and cutting-edge engineering solutions
       </p>
     </div>
 
     <!-- Projects Grid -->
-    {projects.length > 0 ? (
+    {projects.length > 0 && (
       <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
           <article 
@@ -100,7 +100,7 @@ const projects = siteConfig.projects || [];
           </article>
         ))}
       </div>
-    ) : (
+    )
       <div class="text-center py-24">
         <div class="inline-flex items-center justify-center w-24 h-24 rounded-full bg-gray-200 dark:bg-gray-800 mb-6">
           <svg class="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -111,10 +111,10 @@ const projects = siteConfig.projects || [];
           Projects Coming Soon
         </h2>
         <p class="text-gray-600 dark:text-gray-400">
-          I'm currently working on exciting new projects. Check back soon!
+          I'm currently working on some exciting new projects. Check back soon!
         </p>
       </div>
-    )}
+    }
 
     <!-- Call to Action -->
     <div class="mt-20 text-center animate-fade-in-delayed">
@@ -123,7 +123,7 @@ const projects = siteConfig.projects || [];
           Let's Build Something Together
         </h2>
         <p class="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
-          Interested in collaborating on robotics projects or discussing autonomous systems?
+          Interested in collaborating on projects or discussing research ideas?
         </p>
         <a 
           href={`mailto:${siteConfig.social.email}`}
@@ -205,4 +205,5 @@ const projects = siteConfig.projects || [];
   article:hover::before {
     opacity: 1;
   }
+
 </style>
