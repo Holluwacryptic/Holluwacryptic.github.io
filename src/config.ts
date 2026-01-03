@@ -10,30 +10,28 @@ export const siteConfig = {
     github: "https://github.com/Holluwacryptic",
   },
   aboutMe:
-    "Learning robotics and building projects on Unmanned Aerial Vehicles. A professional graduate mechanical engineer (Masters of Science) with profesional experience in automobile repair, maintenance operations, supply chain and fleet management.",
-  programming: ["C", "C++", "Python"],
-  robotics : ["Gazebo", "Docker", "Onshape", "Machine Learning", ""],
-  tools: ["Linux", "ROS2", "Gazebo", "Docker", "Onshape", "Machine Learning"]
+    "Self Learning robotics engineer, building projects on Fixed-Wing VTOL hybrid Unmanned Aerial Vehicles. Professional graduate mechanical engineer with experience in automation, automobile repair, maintenance operations, supply chain and fleet management.",
+  skills: ["CAD & CAM", "Robotic UAV Development", "Programming", "Hardwaare Integration"],
   projects: [
     {
       name: "Simulation of multi-agent UAVs in uncertain environment",
       description:
-        "Using Linux, ROS2, Gazebo, Docker, ",
-      link: "https://aidevroundup.com/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
+        "A Software-in-the-Loop (SITL) simulation project integrating PX4 firmware, Gazebo physics simulator, ROS2 middleware, and QGroundControl for fixed-wing VTOL UAV development. Designed with high-fidelity environment models with wind turbulence, sensor noise, and actuator dynamics. Testing and logging different flight scenarios with varying weather, payloads, and failure modes before hardware deployment.",
+      link: "https://github.com/Holluwacryptic/blog",
+      skills: ["LinuxOS Ubuntu", "C++", "Python"],
     },
     {
-      name: "Chrome Extension Mastery: Build Full-Stack Extensions with React & Node.js",
+      name: "Machine Learning Development Pipeline for UAV Simulation",
       description:
-        "Master the art of building production-ready, full-stack Chrome Extensions using modern web technologies and best practices",
-      link: "https://fullstackextensions.com/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
+        "A complete ML development workflow for UAV systems: collecting and logging 100+ hours of flight data plus 10,000+ camera frames (ROS2/Gazebo); preprocessed using NumPy/Pandas with cleaning, normalization, and 70/15/15 data splits; engineered features via statistical analysis (FFT, PCA) and derived metrics; developed models (LSTM, CNN, DQN, PPO) in TensorFlow/PyTorch with custom loss functions and Optuna hyperparameter tuning; trained on GPU with regularization and TensorBoard monitoring; deployed TensorFlow Lite models to PX4 via ROS2 with <50ms latency; validated across 200+ scenarios with ablation studies; implemented MLOps pipeline with continuous retraining and version control (DVC/MLflow).",
+      link: "https://github.com/Holluwacryptic/blog",
+      skills: ["LinuxOS Ubuntu", "C++", "Python", "Docker"],
     },
     {
-      name: "ExtensionKit",
+      name: "Fixed-Wing VTOL CAD Design with Multi-Physics Simulation",
       description:
-        "Kit to jump-start your Chrome extension projects with a variety of battle-tested starter templates & examples",
-      link: "https://extensionkit.io/?ref=devportfolio",
+        "Modeled complete hybrid VTOL platform in Onshape/SolidWorks (1.5m span, 4kg MTOW) with quad-tiltrotor architecture optimized for reconnaissance, cargo delivery, aerial mapping, and emergency response applications",
+      link: "https://github.com/Holluwacryptic/blog",
       skills: ["React", "Node.js", "AWS"],
     },
   ],
@@ -81,13 +79,14 @@ export const siteConfig = {
       ],
     },
     {
-      school: "Online Platform",
-      degree: "Full Stack Development Certificate",
-      dateRange: "2019",
+      school: "Federal University of Technology Akure",
+      degree: "Masters of Science in Mechanical Engineering",
+      dateRange: "2021 - 2025",
       achievements: [
         "Completed 500+ hours of coursework",
-        "Built 10+ portfolio projects",
-        "Specialized in React and Node.js",
+        "Began to build 10+ portfolio projects",
+        "Hardware integration of software welding platform"
+        "Specialized in Automation, Welding and Programming",
       ],
     },
   ],
