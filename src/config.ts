@@ -30,20 +30,25 @@ export const siteConfig = {
     {
       name: "Fixed-Wing VTOL CAD Design with Multi-Physics Simulation",
       description:
-        "Modeled complete hybrid VTOL platform in Onshape/SolidWorks (1.5m span, 4kg MTOW) with quad-tiltrotor architecture optimized for reconnaissance, cargo delivery, aerial mapping, and emergency response applications",
+        "Modeled complete hybrid VTOL platform in Onshape and SolidWorks (1.5m span, 4kg MTOW) with quad-tiltrotor architecture optimized for reconnaissance, cargo delivery, aerial mapping, and emergency response applications",
       link: "https://github.com/Holluwacryptic/blog",
-      skills: ["React", "Node.js", "AWS"],
+      skills: ["Onshape, Solidworks],
     },
   ],
   experience: [
     {
-      company: "Tech Company",
-      title: "Senior Software Engineer",
+      company: "Tdad Logistic Network",
+      title: "Robotic Engineer",
       dateRange: "Jan 2022 - Present",
       bullets: [
-        "Led development of microservices architecture serving 1M+ users",
-        "Reduced API response times by 40% through optimization",
-        "Mentored team of 5 junior developers",
+        "Designed a comprehensive testing framework combining software-in-the-loop (SITL)
+        simulation with Gazebo, executing 5,000+ automated test scenarios covering diverse 
+        weather conditions, sensor failures, and GPS-denied environments achieving 99.5% 
+        system reliability before production release",
+        "Member of a cross-functional robotics team of 8 engineers (controls, perception, 
+        embedded systems) through Agile development cycles, delivering major feature releases 
+        over 12 months including autonomous landing system upgrade and multi-drone coordination
+        capability while maintaining 90% operational uptime through phased rollout strategy",
       ],
     },
     {
