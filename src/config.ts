@@ -11,7 +11,7 @@ export const siteConfig = {
   },
   aboutMe:
     "Self Learning robotics engineer, building projects on Fixed-Wing VTOL hybrid Unmanned Aerial Vehicles. Professional graduate mechanical engineer with experience in automation, automobile repair, maintenance operations, supply chain and fleet management.",
-  skills: ["CAD & CAM", "Robotic UAV Development", "Programming", "Hardwaare Integration"],
+  skills: ["CAD & CAM", "Robotic UAV Development", "Programming", "Hardware Integration"],
   projects: [
     {
       name: "Simulation of multi-agent UAVs in uncertain environment",
@@ -41,14 +41,8 @@ export const siteConfig = {
       title: "Robotic Engineer",
       dateRange: "Jan 2022 - Present",
       bullets: [
-        "Designed a comprehensive testing framework combining software-in-the-loop (SITL)
-        simulation with Gazebo, executing 5,000+ automated test scenarios covering diverse 
-        weather conditions, sensor failures, and GPS-denied environments achieving 99.5% 
-        system reliability before production release",
-        "Member of a cross-functional robotics team of 8 engineers (controls, perception, 
-        embedded systems) through Agile development cycles, delivering major feature releases 
-        over 12 months including autonomous landing system upgrade and multi-drone coordination
-        capability while maintaining 90% operational uptime through phased rollout strategy",
+        "Designed a comprehensive testing framework combining software-in-the-loop (SITL) simulation with Gazebo, executing 5,000+ automated test scenarios covering diverse weather conditions, sensor failures, and GPS-denied environments achieving 99.5% system reliability before production release",
+        "Only member of a robotics engineering team (controls, perception, embedded systems) through Agile development cycles, delivering major feature releases over 12 months including autonomous landing system upgrade and multi-drone coordination capability while maintaining 90% operational uptime.",
       ],
     },
     {
@@ -90,7 +84,7 @@ export const siteConfig = {
       achievements: [
         "Completed 500+ hours of coursework",
         "Began to build 10+ portfolio projects",
-        "Hardware integration of software welding platform"
+        "Hardware integration of software welding platform",
         "Specialized in Automation, Welding and Programming",
       ],
     },
