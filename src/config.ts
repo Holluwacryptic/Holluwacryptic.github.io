@@ -16,19 +16,19 @@ export const siteConfig = {
     {
       name: "Simulation of fixed-wing VTOL UAVs in uncertain environment",
       description: "A Software-in-the-Loop (SITL) simulation project integrating PX4 firmware, Gazebo physics simulator, ROS2 middleware, and QGroundControl for fixed-wing VTOL UAV development.",
-      link: "https://github.com/Holluwacryptic/blog",
+      link: "https://holluwacryptic.github.io/projects/",
       skills: ["Linux", "C++", "Python", "ROS2", "PX4", "Gazebo Harmonic", "QGC"],
     },
     {
       name: "Machine Learning Development Pipeline for UAV Simulation",
       description: "A complete ML development workflow for UAV systems, collecting and logging 100+ hours of flight data plus 10,000+ camera frames (ROS2/Gazebo).",
-      link: "https://github.com/Holluwacryptic/blog",
+      link: "https://holluwacryptic.github.io/projects/",
       skills: ["Linux", "C++", "Python", "Docker", "ROS2", "PX4", "Gazebo Harmonic", "QGC"],
     },
     {
-      name: "Design of a quad-tiltrotor Fixed-Wing VTOL CAD and Simulation",
+      name: "Design of a Fixed-Wing drone in CAD and Simulation",
       description: "Model of a complete hybrid VTOL UAV in Onshape and SolidWorks (1.5m span, 4kg MTOW) with quad-tiltrotor architecture optimized for general purposes use.",
-      link: "https://github.com/Holluwacryptic/blog",
+      link: "https://holluwacryptic.github.io/projects/",
       skills: ["Onshape", "Solidworks"],
     },
   ],
