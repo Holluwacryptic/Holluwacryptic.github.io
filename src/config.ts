@@ -28,7 +28,7 @@ export const siteConfig = {
     {
       name: "Design of a Fixed-Wing drone in CAD and Simulation",
       description: "Model of a complete hybrid VTOL UAV in Onshape and SolidWorks (1.5m span, 4kg MTOW) with quad-tiltrotor architecture optimized for general purposes use.",
-      link: "https://holluwacryptic.github.io/projects/",
+      link: "https://cad.onshape.com/documents/04f94d1f7d801959d25502db/w/e450960a8e11bb8139211259/e/a92a39ee916624ffc44522bc?renderMode=0&uiState=6985e1511ef127c141675a61",
       skills: ["Onshape", "Solidworks"],
     },
   ],
